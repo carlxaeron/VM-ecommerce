@@ -1,9 +1,16 @@
 <template>
-  <Nuxt />
+  <div>
+    <HeaderContainer />
+    <Nuxt />
+    <Footer />
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'DefaultLayout',
-  }
+import HeaderContainer from '../container/HeaderContainer.vue';
+import Footer from '~/container/Footer.vue';
+export default {
+  name: "DefaultLayout",
+  components: { Footer, HeaderContainer }
+}
 </script>
