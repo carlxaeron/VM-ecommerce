@@ -1,310 +1,178 @@
 <template>
-  <!--welcome-hero start -->
-  <header id="home" class="welcome-hero">
-
-    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-      <!--/.carousel-indicator -->
-      <ol class="carousel-indicators">
-        <li data-target="#header-carousel" data-slide-to="0" class="active"><span class="small-circle"></span></li>
-        <li data-target="#header-carousel" data-slide-to="1"><span class="small-circle"></span></li>
-        <li data-target="#header-carousel" data-slide-to="2"><span class="small-circle"></span></li>
-      </ol><!-- /ol-->
-      <!--/.carousel-indicator -->
-
-      <!--/.carousel-inner -->
-      <div class="carousel-inner" role="listbox">
-        <!-- .item -->
-        <div class="item active">
-          <div class="single-slide-item slide1">
-            <div class="container">
-              <div class="welcome-hero-content">
-                <div class="row">
-                  <div class="col-sm-7">
-                    <div class="single-welcome-hero">
-                      <div class="welcome-hero-txt">
-                        <h4>great design collection</h4>
-                        <h2>cloth covered accent chair</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor ut labore
-                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                          nisi ut aliquip.
-                        </p>
-                        <div class="packages-price">
-                          <p>
-                            $ 399.00
-                            <del>$ 499.00</del>
-                          </p>
-                        </div>
-                        <button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
-                          <span class="lnr lnr-plus-circle"></span>
-                          add <span>to</span> cart
-                        </button>
-                        <button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
-                          more info
-                        </button>
-                      </div>
-                      <!--/.welcome-hero-txt-->
-                    </div>
-                    <!--/.single-welcome-hero-->
-                  </div>
-                  <!--/.col-->
-                  <div class="col-sm-5">
-                    <div class="single-welcome-hero">
-                      <div class="welcome-hero-img">
-                        <img src="assets/images/slider/slider1.png" alt="slider image">
-                      </div>
-                      <!--/.welcome-hero-txt-->
-                    </div>
-                    <!--/.single-welcome-hero-->
-                  </div>
-                  <!--/.col-->
-                </div>
-                <!--/.row-->
-              </div>
-              <!--/.welcome-hero-content-->
-            </div><!-- /.container-->
-          </div><!-- /.single-slide-item-->
-
-        </div><!-- /.item .active-->
-
-        <div class="item">
-          <div class="single-slide-item slide2">
-            <div class="container">
-              <div class="welcome-hero-content">
-                <div class="row">
-                  <div class="col-sm-7">
-                    <div class="single-welcome-hero">
-                      <div class="welcome-hero-txt">
-                        <h4>great design collection</h4>
-                        <h2>mapple wood accent chair</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor ut labore
-                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                          nisi ut aliquip.
-                        </p>
-                        <div class="packages-price">
-                          <p>
-                            $ 199.00
-                            <del>$ 299.00</del>
-                          </p>
-                        </div>
-                        <button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
-                          <span class="lnr lnr-plus-circle"></span>
-                          add <span>to</span> cart
-                        </button>
-                        <button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
-                          more info
-                        </button>
-                      </div>
-                      <!--/.welcome-hero-txt-->
-                    </div>
-                    <!--/.single-welcome-hero-->
-                  </div>
-                  <!--/.col-->
-                  <div class="col-sm-5">
-                    <div class="single-welcome-hero">
-                      <div class="welcome-hero-img">
-                        <img src="assets/images/slider/slider2.png" alt="slider image">
-                      </div>
-                      <!--/.welcome-hero-txt-->
-                    </div>
-                    <!--/.single-welcome-hero-->
-                  </div>
-                  <!--/.col-->
-                </div>
-                <!--/.row-->
-              </div>
-              <!--/.welcome-hero-content-->
-            </div><!-- /.container-->
-          </div><!-- /.single-slide-item-->
-
-        </div><!-- /.item .active-->
-
-        <div class="item">
-          <div class="single-slide-item slide3">
-            <div class="container">
-              <div class="welcome-hero-content">
-                <div class="row">
-                  <div class="col-sm-7">
-                    <div class="single-welcome-hero">
-                      <div class="welcome-hero-txt">
-                        <h4>great design collection</h4>
-                        <h2>valvet accent arm chair</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor ut labore
-                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                          nisi ut aliquip.
-                        </p>
-                        <div class="packages-price">
-                          <p>
-                            $ 299.00
-                            <del>$ 399.00</del>
-                          </p>
-                        </div>
-                        <button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
-                          <span class="lnr lnr-plus-circle"></span>
-                          add <span>to</span> cart
-                        </button>
-                        <button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
-                          more info
-                        </button>
-                      </div>
-                      <!--/.welcome-hero-txt-->
-                    </div>
-                    <!--/.single-welcome-hero-->
-                  </div>
-                  <!--/.col-->
-                  <div class="col-sm-5">
-                    <div class="single-welcome-hero">
-                      <div class="welcome-hero-img">
-                        <img src="assets/images/slider/slider3.png" alt="slider image">
-                      </div>
-                      <!--/.welcome-hero-txt-->
-                    </div>
-                    <!--/.single-welcome-hero-->
-                  </div>
-                  <!--/.col-->
-                </div>
-                <!--/.row-->
-              </div>
-              <!--/.welcome-hero-content-->
-            </div><!-- /.container-->
-          </div><!-- /.single-slide-item-->
-
-        </div><!-- /.item .active-->
-      </div><!-- /.carousel-inner-->
-
-    </div>
-    <!--/#header-carousel-->
-
-    <!-- top-area Start -->
-    <div class="top-area">
-      <div class="header-area">
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
-          data-minus-value-mobile="55" data-speed="1000">
-
-          <!-- Start Top Search -->
-          <div class="top-search">
-            <div class="container">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-              </div>
-            </div>
+  <header>
+    <!-- Topbar Start -->
+    <div id="topbar" class="container-fluid">
+      <div class="row bg-secondary py-2 px-xl-5">
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="d-inline-flex align-items-center">
+            <a class="text-dark" href="">FAQs</a>
+            <span class="text-muted px-2">|</span>
+            <a class="text-dark" href="">Help</a>
+            <span class="text-muted px-2">|</span>
+            <a class="text-dark" href="">Support</a>
           </div>
-          <!-- End Top Search -->
-
-          <div class="container">
-            <!-- Start Atribute Navigation -->
-            <div class="attr-nav">
-              <ul>
-                <li class="search">
-                  <a href="#"><span class="lnr lnr-magnifier"></span></a>
-                </li>
-                <!--/.search-->
-                <li class="nav-setting">
-                  <a href="#"><span class="lnr lnr-cog"></span></a>
-                </li>
-                <!--/.search-->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="lnr lnr-cart"></span>
-                    <span class="badge badge-bg-1">2</span>
-                  </a>
-                  <ul class="dropdown-menu cart-list s-cate">
-                    <li class="single-cart-list">
-                      <a href="#" class="photo"><img src="assets/images/collection/arrivals1.png" class="cart-thumb"
-                          alt="image" /></a>
-                      <div class="cart-list-txt">
-                        <h6><a href="#">arm <br> chair</a></h6>
-                        <p>1 x - <span class="price">$180.00</span></p>
-                      </div>
-                      <!--/.cart-list-txt-->
-                      <div class="cart-close">
-                        <span class="lnr lnr-cross"></span>
-                      </div>
-                      <!--/.cart-close-->
-                    </li>
-                    <!--/.single-cart-list -->
-                    <li class="single-cart-list">
-                      <a href="#" class="photo"><img src="assets/images/collection/arrivals2.png" class="cart-thumb"
-                          alt="image" /></a>
-                      <div class="cart-list-txt">
-                        <h6><a href="#">single <br> armchair</a></h6>
-                        <p>1 x - <span class="price">$180.00</span></p>
-                      </div>
-                      <!--/.cart-list-txt-->
-                      <div class="cart-close">
-                        <span class="lnr lnr-cross"></span>
-                      </div>
-                      <!--/.cart-close-->
-                    </li>
-                    <!--/.single-cart-list -->
-                    <li class="single-cart-list">
-                      <a href="#" class="photo"><img src="assets/images/collection/arrivals3.png" class="cart-thumb"
-                          alt="image" /></a>
-                      <div class="cart-list-txt">
-                        <h6><a href="#">wooden arn <br> chair</a></h6>
-                        <p>1 x - <span class="price">$180.00</span></p>
-                      </div>
-                      <!--/.cart-list-txt-->
-                      <div class="cart-close">
-                        <span class="lnr lnr-cross"></span>
-                      </div>
-                      <!--/.cart-close-->
-                    </li>
-                    <!--/.single-cart-list -->
-                    <li class="total">
-                      <span>Total: $0.00</span>
-                      <button class="btn-cart pull-right" onclick="window.location.href='#'">view cart</button>
-                    </li>
-                  </ul>
-                </li>
-                <!--/.dropdown-->
-              </ul>
-            </div>
-            <!--/.attr-nav-->
-            <!-- End Atribute Navigation -->
-
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                <i class="fa fa-bars"></i>
-              </button>
-              <a class="navbar-brand" href="index.html">sine<span>mkt</span>.</a>
-
-            </div>
-            <!--/.navbar-header-->
-            <!-- End Header Navigation -->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-              <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                <li class=" scroll active"><a href="#home">home</a></li>
-                <li class="scroll"><a href="#new-arrivals">new arrival</a></li>
-                <li class="scroll"><a href="#feature">features</a></li>
-                <li class="scroll"><a href="#blog">blog</a></li>
-                <li class="scroll"><a href="#newsletter">contact</a></li>
-              </ul>
-              <!--/.nav -->
-            </div><!-- /.navbar-collapse -->
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+          <div class="d-inline-flex align-items-center">
+            <a class="text-dark px-2" href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="text-dark px-2" href="">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="text-dark px-2" href="">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="text-dark px-2" href="">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="text-dark pl-2" href="">
+              <i class="fab fa-youtube"></i>
+            </a>
           </div>
-          <!--/.container-->
-        </nav>
-        <!--/nav-->
-        <!-- End Navigation -->
+        </div>
       </div>
-      <!--/.header-area-->
-      <div class="clearfix"></div>
+      <div class="row align-items-center py-3 px-xl-5">
+        <div class="col-lg-3 d-none d-lg-block">
+          <a href="" class="text-decoration-none">
+            <h1 class="m-0 display-5 font-weight-semi-bold"><span
+                class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+          </a>
+        </div>
+        <div class="col-lg-6 col-6 text-left">
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for products">
+              <div class="input-group-append">
+                <span class="input-group-text bg-transparent text-primary">
+                  <i class="fa fa-search"></i>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-3 col-6 text-right">
+          <a href="" class="btn border">
+            <i class="fas fa-heart text-primary"></i>
+            <span class="badge">0</span>
+          </a>
+          <a href="" class="btn border">
+            <i class="fas fa-shopping-cart text-primary"></i>
+            <span class="badge">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
 
-    </div><!-- /.top-area-->
-    <!-- top-area End -->
 
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-5">
+      <div class="row border-top px-xl-5">
+        <div class="col-lg-3 d-none d-lg-block">
+          <a
+            class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100"
+            data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+            <h6 class="m-0">Categories</h6>
+            <i class="fa fa-angle-down text-dark"></i>
+          </a>
+          <nav
+            id="navbar-vertical"
+            class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0"
+            >
+            <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i
+                    class="fa fa-angle-down float-right mt-1"></i></a>
+                <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                  <a href="" class="dropdown-item">Men's Dresses</a>
+                  <a href="" class="dropdown-item">Women's Dresses</a>
+                  <a href="" class="dropdown-item">Baby's Dresses</a>
+                </div>
+              </div>
+              <a href="" class="nav-item nav-link">Shirts</a>
+              <a href="" class="nav-item nav-link">Jeans</a>
+              <a href="" class="nav-item nav-link">Swimwear</a>
+              <a href="" class="nav-item nav-link">Sleepwear</a>
+              <a href="" class="nav-item nav-link">Sportswear</a>
+              <a href="" class="nav-item nav-link">Jumpsuits</a>
+              <a href="" class="nav-item nav-link">Blazers</a>
+              <a href="" class="nav-item nav-link">Jackets</a>
+              <a href="" class="nav-item nav-link">Shoes</a>
+            </div>
+          </nav>
+        </div>
+        <div class="col-lg-9">
+          <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+            <a href="" class="text-decoration-none d-block d-lg-none">
+              <h1 class="m-0 display-5 font-weight-semi-bold"><span
+                  class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              id="navbarCollapse"
+              class="collapse navbar-collapse justify-content-between"
+              >
+              <div class="navbar-nav mr-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="shop.html" class="nav-item nav-link">Shop</a>
+                <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
+                <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <div class="dropdown-menu rounded-0 m-0">
+                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
+                    <a href="checkout.html" class="dropdown-item">Checkout</a>
+                  </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+              </div>
+              <div class="navbar-nav ml-auto py-0">
+                <a href="" class="nav-item nav-link">Login</a>
+                <a href="" class="nav-item nav-link">Register</a>
+              </div>
+            </div>
+          </nav>
+          <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="height: 410px;">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                  <div class="p-3" style="max-width: 700px;">
+                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
+                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
+                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" style="height: 410px;">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                  <div class="p-3" style="max-width: 700px;">
+                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
+                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
+                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+              <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+              </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+              <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar End -->
   </header>
-  <!--/.welcome-hero-->
-  <!--welcome-hero end -->
 </template>
 
 <script>

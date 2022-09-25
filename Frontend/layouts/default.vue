@@ -2,15 +2,15 @@
   <div>
     <HeaderContainer />
     <Nuxt />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
 import HeaderContainer from '../container/HeaderContainer.vue';
-import Footer from '~/container/Footer.vue';
+// import Footer from '~/container/Footer.vue';
 export default {
   name: "DefaultLayout",
-  components: { Footer, HeaderContainer }
+  components: { HeaderContainer }
 }
 </script>
