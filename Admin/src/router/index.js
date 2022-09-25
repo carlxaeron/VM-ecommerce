@@ -1,13 +1,31 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Style from "@/views/StyleView.vue";
 import Home from "@/views/HomeView.vue";
+import AdminLoginView from "@/views/Admin/AdminLoginView.vue";
+import AdminHomeView from "@/views/Admin/AdminHomeView.vue";
 
 const routes = [
   {
     meta: {
-      title: "Select style",
+      title: "Admin",
     },
     path: "/",
+    name: "adminLogin",
+    component: AdminLoginView,
+  },
+  {
+    meta: {
+      title: "Admin",
+    },
+    path: "/admin/dashboard",
+    name: "adminHome",
+    component: AdminHomeView,
+  },
+  {
+    meta: {
+      title: "Select style",
+    },
+    path: "/sample/",
     name: "style",
     component: Style,
   },
@@ -17,7 +35,7 @@ const routes = [
     meta: {
       title: "Dashboard",
     },
-    path: "/dashboard",
+    path: "/sample/dashboard",
     name: "dashboard",
     component: Home,
   },
@@ -25,7 +43,7 @@ const routes = [
     meta: {
       title: "Tables",
     },
-    path: "/tables",
+    path: "/sample/tables",
     name: "tables",
     component: () => import("@/views/TablesView.vue"),
   },
@@ -33,7 +51,7 @@ const routes = [
     meta: {
       title: "Forms",
     },
-    path: "/forms",
+    path: "/sample/forms",
     name: "forms",
     component: () => import("@/views/FormsView.vue"),
   },
@@ -41,7 +59,7 @@ const routes = [
     meta: {
       title: "Profile",
     },
-    path: "/profile",
+    path: "/sample/profile",
     name: "profile",
     component: () => import("@/views/ProfileView.vue"),
   },
@@ -49,7 +67,7 @@ const routes = [
     meta: {
       title: "Ui",
     },
-    path: "/ui",
+    path: "/sample/ui",
     name: "ui",
     component: () => import("@/views/UiView.vue"),
   },
@@ -57,7 +75,7 @@ const routes = [
     meta: {
       title: "Responsive layout",
     },
-    path: "/responsive",
+    path: "/sample/responsive",
     name: "responsive",
     component: () => import("@/views/ResponsiveView.vue"),
   },
@@ -65,7 +83,7 @@ const routes = [
     meta: {
       title: "Login",
     },
-    path: "/login",
+    path: "/sample/login",
     name: "login",
     component: () => import("@/views/LoginView.vue"),
   },
@@ -73,7 +91,7 @@ const routes = [
     meta: {
       title: "Error",
     },
-    path: "/error",
+    path: "/sample/error",
     name: "error",
     component: () => import("@/views/ErrorView.vue"),
   },
