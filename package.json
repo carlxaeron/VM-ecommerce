@@ -1,0 +1,22 @@
+{
+  "name": "akap-ecomm-and-api",
+  "version": "1.0.0",
+  "description": "---\r ## FRONTEND\r `cd FE\\`\r <br/>\r <br/>\r ## to install:",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "cd FE && npm start",
+    "api": "cd API && nodemon app.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run frontend\"",
+    "heroku-postbuild": "cd FE && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlxaeron/VM-ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlxaeron/VM-ecommerce/issues"
+  },
+  "homepage": "https://github.com/carlxaeron/VM-ecommerce#readme"
+}
