@@ -9,34 +9,57 @@
 
 
 <template>
-  <div class="layout--main" :class="[layoutTypeClass, navbarClasses, footerClasses, {'no-scroll': isAppPage}]">
+  <div class="layout--main" :class="['max-w-4xl', 'm-auto', layoutTypeClass, navbarClasses, footerClasses, {'no-scroll': isAppPage}]">
 
-    <vx-tour :steps="steps" v-if="!disableThemeTour && (windowWidth >= 1200 && mainLayoutType === 'vertical' && verticalNavMenuWidth == 'default')" />
-
-    <v-nav-menu
-      :navMenuItems = "navMenuItems"
-      :title         = "ecomm.title"
-      parent        = ".layout--main" />
+    <vx-tour :steps="steps"
+      v-if="!disableThemeTour && (windowWidth >= 1200 && mainLayoutType === 'vertical' && verticalNavMenuWidth == 'default')" />
 
     <div id="content-area" :class="[contentAreaClass, {'show-overlay': bodyOverlay}]">
       <div id="content-overlay" />
 
       <div class="content-wrapper">
 
+        <vs-alert active="true" class="text-dark rounded-none">
+          <router-link to="/" class="text-dark">FAQs</router-link>
+          &nbsp;|&nbsp;
+          <router-link to="/" class="text-dark">Help</router-link>
+          &nbsp;|&nbsp;
+          <router-link to="/" class="text-dark">Support</router-link>
+        </vs-alert>
+
+        <nav-main class="lg:hidden flex" />
+
+        <div class="vx-row md:mt-8">
+          <div class="vx-col w-full xs:w-full lg:w-1/5 mb-base">
+            <div class="btn-group-vertical w-full">
+              <h1 class="md:ml-4 m-auto px-4 md:px-0 mb-4">{{ecomm.title}}</h1>
+              <vs-button color="dark" type="flat" class="text-left">Categories</vs-button>
+              <vs-button color="dark" type="flat" class="text-left">Middle</vs-button>
+              <vs-button color="dark" type="flat" class="text-left">Bottom</vs-button>
+            </div>
+          </div>
+          <div class="vx-col w-full xs:w-full lg:w-4/5 mb-base">
+            <nav-main class="hidden lg:flex" />
+
+            <carousel-effect-fade />
+          </div>
+        </div>
+
         <div class="router-view">
           <div class="router-content">
 
             <transition :name="routerTransition">
 
-              <div v-if="$route.meta.breadcrumb || $route.meta.pageTitle" class="router-header flex flex-wrap items-center mb-6">
-                <div
-                  class="content-area__heading"
+              <div v-if="$route.meta.breadcrumb || $route.meta.pageTitle"
+                class="router-header flex flex-wrap items-center mb-6">
+                <div class="content-area__heading"
                   :class="{'pr-4 border-0 md:border-r border-solid border-grey-light' : $route.meta.breadcrumb}">
                   <h2 class="mb-1">{{ routeTitle }}</h2>
                 </div>
 
                 <!-- BREADCRUMB -->
-                <vx-breadcrumb class="ml-4 md:block hidden" v-if="$route.meta.breadcrumb" :route="$route" :isRTL="$vs.rtl" />
+                <vx-breadcrumb class="ml-4 md:block hidden" v-if="$route.meta.breadcrumb" :route="$route"
+                  :isRTL="$vs.rtl" />
 
                 <!-- DROPDOWN -->
                 <vs-dropdown vs-trigger-click class="ml-auto md:block hidden cursor-pointer">
@@ -70,12 +93,14 @@
 
             <div class="content-area__content">
 
-              <back-to-top bottom="5%" :right="$vs.rtl ? 'calc(100% - 2.2rem - 38px)' : '30px'" visibleoffset="500" v-if="!hideScrollToTop">
+              <back-to-top bottom="5%" :right="$vs.rtl ? 'calc(100% - 2.2rem - 38px)' : '30px'" visibleoffset="500"
+                v-if="!hideScrollToTop">
                 <vs-button icon-pack="feather" icon="icon-arrow-up" class="shadow-lg btn-back-to-top" />
               </back-to-top>
 
               <transition :name="routerTransition" mode="out-in">
-                <router-view @changeRouteTitle="changeRouteTitle" @setAppClasses="(classesStr) => $emit('setAppClasses', classesStr)" />
+                <router-view @changeRouteTitle="changeRouteTitle"
+                  @setAppClasses="(classesStr) => $emit('setAppClasses', classesStr)" />
               </transition>
             </div>
           </div>
@@ -88,14 +113,16 @@
 
 
 <script>
-import BackToTop           from 'vue-backtotop'
-import HNavMenu            from '@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue'
-import navMenuItems        from '@/layouts/components/ecomm/navMenuItems.js'
+import BackToTop from 'vue-backtotop'
+import HNavMenu from '@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue'
+import navMenuItems from '@/layouts/components/ecomm/navMenuItems.js'
 import TheNavbarHorizontal from '@/layouts/components/navbar/TheNavbarHorizontal.vue'
-import TheNavbarVertical   from '@/layouts/components/navbar/TheNavbarVertical.vue'
-import TheFooter           from '@/layouts/components/ecomm/TheFooter.vue'
-import themeConfig         from '@/../themeConfig.js'
-import VNavMenu            from '@/layouts/components/ecomm/VerticalNavMenu.vue'
+import TheNavbarVertical from '@/layouts/components/navbar/TheNavbarVertical.vue'
+import TheFooter from '@/layouts/components/ecomm/TheFooter.vue'
+import themeConfig from '@/../themeConfig.js'
+import VNavMenu from '@/layouts/components/ecomm/VerticalNavMenu.vue'
+import CarouselEffectFade from '@/views/ecomm/components/CarouselEffectFade.vue'
+import NavMain from '../components/ecomm/NavMain.vue'
 
 const VxTour = () => import('@/components/VxTour.vue')
 
@@ -107,7 +134,9 @@ export default {
     TheNavbarHorizontal,
     TheNavbarVertical,
     VNavMenu,
-    VxTour
+    VxTour,
+    CarouselEffectFade,
+    NavMain
   },
   data () {
     /** CUSTOM SETTINGS */
@@ -121,45 +150,45 @@ export default {
     return {
       ecomm,
 
-      disableCustomizer : themeConfig.disableCustomizer,
-      disableThemeTour  : themeConfig.disableThemeTour,
-      dynamicWatchers   : {},
-      footerType        : themeConfig.footerType  || 'static',
-      hideScrollToTop   : themeConfig.hideScrollToTop,
-      isNavbarDark      : false,
-      navbarColor       : themeConfig.navbarColor || '#fff',
-      navbarType        : themeConfig.navbarType  || 'floating',
+      disableCustomizer: themeConfig.disableCustomizer,
+      disableThemeTour: themeConfig.disableThemeTour,
+      dynamicWatchers: {},
+      footerType: themeConfig.footerType || 'static',
+      hideScrollToTop: themeConfig.hideScrollToTop,
+      isNavbarDark: false,
+      navbarColor: themeConfig.navbarColor || '#fff',
+      navbarType: themeConfig.navbarType || 'floating',
       navMenuItems,
-      routerTransition  : themeConfig.routerTransition || 'none',
-      routeTitle        : this.$route.meta.pageTitle,
+      routerTransition: themeConfig.routerTransition || 'none',
+      routeTitle: this.$route.meta.pageTitle,
       steps: [
         {
-          target  : '#btnVNavMenuMinToggler',
-          content : 'Toggle Collapse Sidebar.'
+          target: '#btnVNavMenuMinToggler',
+          content: 'Toggle Collapse Sidebar.'
         },
         {
-          target  : '.vx-navbar__starred-pages',
-          content : 'Create your own bookmarks. You can also re-arrange them using drag & drop.'
+          target: '.vx-navbar__starred-pages',
+          content: 'Create your own bookmarks. You can also re-arrange them using drag & drop.'
         },
         {
-          target  : '.i18n-locale',
-          content : 'You can change language from here.'
+          target: '.i18n-locale',
+          content: 'You can change language from here.'
         },
         {
-          target  : '.navbar-fuzzy-search',
-          content : 'Try fuzzy search to visit pages in flash.'
+          target: '.navbar-fuzzy-search',
+          content: 'Try fuzzy search to visit pages in flash.'
         },
         {
-          target  : '.customizer-btn',
-          content : 'Customize template based on your preference',
-          params  : {
+          target: '.customizer-btn',
+          content: 'Customize template based on your preference',
+          params: {
             placement: 'left'
           }
         },
         {
-          target  : '.vs-button.buy-now',
-          content : 'Buy this awesomeness at affordable price!',
-          params  : {
+          target: '.vs-button.buy-now',
+          content: 'Buy this awesomeness at affordable price!',
+          params: {
             placement: 'top'
           }
         }
@@ -182,11 +211,12 @@ export default {
   computed: {
     bodyOverlay () { return this.$store.state.bodyOverlay },
     contentAreaClass () {
-      if (this.mainLayoutType === 'vertical') {
-        if      (this.verticalNavMenuWidth === 'default') return 'content-area-reduced'
-        else if (this.verticalNavMenuWidth === 'reduced') return 'content-area-lg'
-        else return 'content-area-full'
-      } else return 'content-area-full'
+      // if (this.mainLayoutType === 'vertical') {
+      //   if      (this.verticalNavMenuWidth === 'default') return 'content-area-reduced'
+      //   else if (this.verticalNavMenuWidth === 'reduced') return 'content-area-lg'
+      //   else return 'content-area-full'
+      // } else
+      return 'content-area-full'
     },
     footerClasses () {
       return {
@@ -198,19 +228,19 @@ export default {
     isAppPage () {
       return this.$route.meta.no_scroll
     },
-    isThemeDark ()     { return this.$store.state.theme === 'dark' },
-    layoutTypeClass () { return `main-${this.mainLayoutType}`      },
-    mainLayoutType ()  { return this.$store.state.mainLayoutType   },
-    navbarClasses ()   {
+    isThemeDark () { return this.$store.state.theme === 'dark' },
+    layoutTypeClass () { return `main-${this.mainLayoutType}` },
+    mainLayoutType () { return this.$store.state.mainLayoutType },
+    navbarClasses () {
       return {
-        'navbar-hidden'   : this.navbarType === 'hidden',
-        'navbar-sticky'   : this.navbarType === 'sticky',
-        'navbar-static'   : this.navbarType === 'static',
-        'navbar-floating' : this.navbarType === 'floating'
+        'navbar-hidden': this.navbarType === 'hidden',
+        'navbar-sticky': this.navbarType === 'sticky',
+        'navbar-static': this.navbarType === 'static',
+        'navbar-floating': this.navbarType === 'floating'
       }
     },
     verticalNavMenuWidth () { return this.$store.state.verticalNavMenuWidth },
-    windowWidth ()          { return this.$store.state.windowWidth }
+    windowWidth () { return this.$store.state.windowWidth }
   },
   methods: {
     changeRouteTitle (title) {

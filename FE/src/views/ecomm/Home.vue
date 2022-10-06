@@ -9,8 +9,6 @@
 
 <template>
   <div>
-    <carousel-effect-fade class="mb-8" />
-
     <ais-instant-search :search-client="searchClient" index-name="instant_search" id="algolia-instant-search-demo">
       <!-- AIS CONFIG -->
       <ais-configure :hits-per-page.camel="6" />
@@ -201,8 +199,6 @@ import {
 } from 'vue-instantsearch'
 import algoliasearch from 'algoliasearch/lite'
 
-import CarouselEffectFade            from './components/CarouselEffectFade.vue'
-
 export default {
   components: {
     ItemGridView: () => import('./components/ItemGridView.vue'),
@@ -219,8 +215,7 @@ export default {
     AisRefinementList,
     AisSearchBox,
     AisSortBy,
-    AisStats,
-    CarouselEffectFade
+    AisStats
   },
   data () {
     return {
